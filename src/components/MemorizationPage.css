@@ -1,0 +1,226 @@
+.memo-cont {
+  background-image: url(../assets/background-sea.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cloud-cont {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.game-info {
+  font-family: "Press Start 2p", monospace;
+  position: absolute;
+  top: 1rem;
+  left: 5%;
+  right: 5%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  text-shadow: 2px 2px 0px #1e3445;
+  color: white;
+  font-weight: bold;
+}
+
+.count,
+.wrong-attempts {
+  position: absolute;
+  top: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  text-align: center;
+}
+
+.wrong-attempts {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  background-color: #d9d9d9;
+  color: #73729c;
+  font-size: 1.4rem;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+}
+
+.num-attempts {
+  font-family: "Press Start 2p", monospace;
+  color: #000;
+  font-size: 1.4rem;
+  text-shadow: 2px 2px 0px #1e3445;
+}
+
+.memo-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.2rem;
+  width: 90%;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  padding: 1rem;
+  width: 100%;
+  max-width: 170px;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #89a5abda;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.img-container:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #000;
+  border: 4px solid #000;
+  image-rendering: pixelated;
+}
+
+.img-container img {
+  width: 100%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.img-body {
+  height: 30%;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.img-text {
+  font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+  font-family: "Press Start 2p", monospace;
+  letter-spacing: -1.5%;
+  text-shadow: 1px 1px 0px #1e3445;
+  color: #333;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.names {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem 5%;
+  padding-bottom: 2rem;
+  width: 90%;
+}
+
+.name-text {
+  font-size: clamp(0.6rem, 2vw, 1rem);
+  padding: 0.8rem 1.2rem;
+  font-family: "Press Start 2p", monospace;
+  text-shadow: 1px 1px 0px #1e3445;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.name-text:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #000;
+  border: 4px solid #000;
+  image-rendering: pixelated;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.memo-images > div,
+.names > div {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.selected,
+.matched {
+  box-shadow: 2px 2px 0 #000;
+  border: 3px solid #000;
+  image-rendering: pixelated;
+}
+
+.selected {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+.matched {
+  opacity: 0.5;
+  filter: grayscale(100%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.wrong {
+  animation: shake 0.3s;
+  border: 6px solid red;
+  border-radius: 8px;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 600px) {
+  .game-info {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .wrong-attempts {
+    top: 12vh;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .name-text {
+    padding: 0.6rem 0.8rem;
+  }
+
+  .img-container {
+    max-width: 140px;
+  }
+}

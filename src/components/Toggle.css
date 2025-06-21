@@ -1,0 +1,96 @@
+.toggle-container {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  position: relative;
+  --toggle-container-padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-btn-row {
+  display: flex;
+  position: relative;
+}
+
+.toggle-btn-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-sliding-bg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.toggle-btn {
+  display: flex;
+  align-items: center; 
+  position: relative;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  outline: none;
+  text-transform: capitalize;
+  position: relative;
+  z-index: 1;
+}
+
+.toggle-sm .toggle-btn { font-size: 1rem; padding: 0.5rem 1rem; }
+.toggle-md .toggle-btn { font-size: 1.5rem; padding: 1rem 1.5rem; }
+.toggle-lg .toggle-btn { font-size: 1.75rem; padding: 1.25rem 2rem; }
+
+.toggle-btn.active {
+  color: #F24E1E;
+  font-family: 'Press Start 2P',system-ui;
+  letter-spacing: -2.5%;
+  text-shadow: 2px 3px 0px #1E3445 ;
+  font-weight: 500;
+}
+
+.toggle-btn.hover:not(.active) {
+  color: black;
+}
+
+.toggle-divider {
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 12px 0;
+  align-self: stretch;
+}
+
+@media (max-width: 768px) {
+  .toggle-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .toggle-btn {
+    width: 100%;
+    min-width: unset;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .toggle-divider {
+    display: none;
+  }
+
+  .toggle-sliding-bg {
+    display: none; 
+  }
+}

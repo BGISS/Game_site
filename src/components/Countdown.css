@@ -1,0 +1,27 @@
+.count-cont{
+    width:fit-content;
+    font-size: 1.8rem;
+    padding: 10px;
+    background-color: #D9D9D9;
+    border-radius: 5px;
+    color: white;
+    font-family: "Roboto";
+}
+
+.time{
+    color: black;
+    font-family: "Press Start 2P";
+    font-size: 1.8;
+    letter-spacing: -2.5%;
+    text-shadow: 2px 2px 0px #1E3445 ;
+}
+
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
