@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router';
 
 function StartPage(){
     const [category, setCategory] = useState('Objects');
-    const [difficulty,setDifficulty]= useState('normal');
+    const [difficulty,setDifficulty]= useState('Normal');
     const navigate = useNavigate();
     const categoryOptions=["Objects","Nature"];
     const difficultyOptions=["Normal","Hard","Zilwa"]

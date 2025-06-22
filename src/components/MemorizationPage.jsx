@@ -21,7 +21,7 @@ function MemorizationPage(){
     const objects = category === "Objects" ? [
     { image: Objects.coat, text: "palto" },
     { image: Objects.marble, text: "kanet" },
-    { image: Objects.swimming, text: "natasion" },
+    { image: Objects.ravanne, text: "ravanne" },
     { image: Objects.house, text: "lacaz" },
     { image: cloud, text: "nyaze" },
     { image: Objects.gum, text: "chingham" }

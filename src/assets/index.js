@@ -1,5 +1,5 @@
 import coat from "./object-images/coat.png";
-import swimming from "./object-images/swimming.jpeg";
+import ravanne from "./object-images/ravanne.jpg";
 import house from "./object-images/house.jpeg";
 import marble from "./object-images/marble.jpeg";
 import gum from "./object-images/gum.jpeg";
@@ -12,7 +12,7 @@ import trochetia from "./nature-images/trochetia.jpeg"
 
 const Objects = {
   coat,
-  swimming,
+  ravanne,
   house,
   marble,
   gum
