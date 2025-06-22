@@ -43,13 +43,13 @@ function MemorizationPage(){
     let time=5
     switch(difficulty){
         case "Normal":
-            time=10;
+            time=8;
             break;
         case "Hard":
-            time=5;
+            time=6;
             break;
         case "Zilwa":
-            time=3;
+            time=5;
             break;
     }
     function handleSelectImage(id) {
